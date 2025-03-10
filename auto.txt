@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct car
+{
+    string plate;
+    string brand;
+    string model;
+    int year;
+};
+
+car List[5] =
+{
+    {"PPP-525", "Porsche", "911", 2019},
+    {"AJJ-121", "BMW", "X7", 2020},
+    {"VFD-420", "Mercedes", "AMG", 2007},
+    {"SSS-999", "Ford", "Ranger", 2012},
+    {"PRX-567", "Audi", "A6", 2022}
+};
+
+int main(){
+    string s;
+    cin >> s;
+    int i=0;
+    bool r=false;
+    for(i = 0; i < 5; i++)
+    {
+        if (List[i].plate == s)
+        {
+            cout << List[i].plate << ' ' << List[i].brand << ' ' << List[i].model << ' ' << List[i].year<< endl;
+            r=true;
+        }
+
+
+    }
+    if(r==false) cout<<"NOT FOUND";
+}
